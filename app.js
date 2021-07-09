@@ -72,7 +72,7 @@ connection.connect(function(err) {
 //db.findAllEmployees
 function findAllEmployees() {
   connection.query(
-      "SELECT employee.id, employee.first_name, employee.last_name, role.title, department.name AS department, role.salary, CONCAT(manager.first_name, ' ', manager.last_name) AS manager FROM employee LEFT JOIN role on employee.role_id = role.id LEFT JOIN department on role.department_id = department.id;",
+      "SELECT employee.id, employee.first_name, employee.last_name, role.title, department.name AS department, role.salary;",
         function(err, res) {
           if (err) throw err;
           console.table(res);
