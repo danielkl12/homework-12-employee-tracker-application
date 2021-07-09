@@ -1,8 +1,9 @@
-const connection = require("./connection");
+/*const connection = require("../connection");
+const mysql = require("mysql");
 
 class DB {
-    constructor(connection) {
-        this.connection = connection;
+    constructor() {
+        this.connection = connection();
     }
     findAllEmployees(employee) {
         return this.connection.query(
@@ -39,4 +40,4 @@ class DB {
 
 }
 
-module.exports = new DB(connection);
+module.exports = DB;*/
