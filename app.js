@@ -120,7 +120,7 @@ function updateEmployee() {
   ]).then(function(res) {
       const employeeUpdate = res.employeeUpdate;
       const newRoleId = res.newRoleId;
-      connection.query(updateQuery, function(err,res){
+      connection.query(query, function(err,res){
         if (err) throw err;
       })
       console.table(res);
